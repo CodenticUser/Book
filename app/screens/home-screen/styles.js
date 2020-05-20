@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {Size, Colors} from '@theme';
 
 const styles = StyleSheet.create({
   Main: {
     flex: 1,
-    backgroundColor: 'rgb(255,110,161)',
+    backgroundColor: Colors.primary,
   },
   MainImage: {
     position: 'absolute',
@@ -14,16 +15,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   InsideImage: {
-    marginHorizontal: 20,
+    marginHorizontal: Size.moderateScale(20),
   },
-  Image: {
+  Img: {
     justifyContent: 'center',
     alignItems: 'center',
   },
   ImageText: {
-    marginTop: 5,
-    color: 'rgb(255,255,255)',
-    fontSize: 20,
+    marginTop: Size.moderateScale(5),
+    color: Colors.secondary,
+    fontSize: Size.moderateScale(20),
   },
 });
 
