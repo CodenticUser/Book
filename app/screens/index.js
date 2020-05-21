@@ -1,5 +1,5 @@
 export * from './discover-screen';
-export * from './home-screen';
+export * from './splash-screen';
 export * from './library-screen';
 export * from './profile-screen';
 export * from './start-screen';

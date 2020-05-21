@@ -6,7 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {
-  HomeScreen,
+  SplashScreen,
   StartScreen,
   WelcomeScreen,
   DiscoverScreen,
@@ -21,7 +21,7 @@ const Stack = createStackNavigator();
 function Auth() {
   return (
     <Stack.Navigator headerMode={false}>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
     </Stack.Navigator>
@@ -33,7 +33,7 @@ function BottomTab() {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: Colors.activeTintColor,
+        activeTintColor: Colors.primary,
       }}>
       <Tab.Screen
         name="DiscoverScreen"
@@ -46,9 +46,7 @@ function BottomTab() {
               style={{
                 width: 20,
                 height: 22,
-                tintColor: focused
-                  ? Colors.activeTintColor
-                  : Colors.diactiveTintColor,
+                tintColor: focused ? Colors.primary : Colors.diactiveTintColor,
               }}
             />
           ),
@@ -65,9 +63,7 @@ function BottomTab() {
               style={{
                 width: 20,
                 height: 20,
-                tintColor: focused
-                  ? Colors.activeTintColor
-                  : Colors.diactiveTintColor,
+                tintColor: focused ? Colors.primary : Colors.diactiveTintColor,
               }}
             />
           ),
@@ -84,9 +80,7 @@ function BottomTab() {
               style={{
                 width: 22,
                 height: 20,
-                tintColor: focused
-                  ? Colors.activeTintColor
-                  : Colors.diactiveTintColor,
+                tintColor: focused ? Colors.primary : Colors.diactiveTintColor,
               }}
             />
           ),
@@ -103,9 +97,7 @@ function BottomTab() {
               style={{
                 width: 20,
                 height: 20,
-                tintColor: focused
-                  ? Colors.activeTintColor
-                  : Colors.diactiveTintColor,
+                tintColor: focused ? Colors.primary : Colors.diactiveTintColor,
               }}
             />
           ),
@@ -122,9 +114,7 @@ function BottomTab() {
               style={{
                 width: 20,
                 height: 20,
-                tintColor: focused
-                  ? Colors.activeTintColor
-                  : Colors.diactiveTintColor,
+                tintColor: focused ? Colors.primary : Colors.diactiveTintColor,
               }}
             />
           ),
