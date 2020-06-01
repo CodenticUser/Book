@@ -3,22 +3,6 @@ import {moderateScale, verticalScale} from 'react-native-size-matters';
 import {Images, Size, Colors} from '@theme';
 
 const styles = StyleSheet.create({
-  Touch: {
-    height: verticalScale(38),
-    borderRadius: moderateScale(5),
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: Colors.primary,
-    marginTop: moderateScale(10),
-    marginBottom: moderateScale(45),
-  },
-  TouchText: {
-    fontSize: moderateScale(20),
-    color: Colors.secondary,
-  },
-  item: {
-    flexDirection: 'row',
-  },
   title: {
     fontSize: Size.moderateScale(15),
     marginTop: Size.moderateScale(15),
@@ -58,30 +42,6 @@ const styles = StyleSheet.create({
   InsideImg: {
     height: Size.moderateScale(100),
     width: Size.moderateScale(100),
-  },
-  MainFlex: {flex: 1},
-  LinerData: {backgroundColor: 'red', height: Size.moderateScale(130)},
-  InsideLiner: {height: Size.moderateScale(130)},
-  LinerText: {
-    fontSize: moderateScale(20),
-    color: Colors.secondary,
-    marginTop: Size.moderateScale(40),
-    marginHorizontal: moderateScale(20),
-  },
-  LinerSec: {
-    fontSize: moderateScale(20),
-    color: Colors.secondary,
-    marginHorizontal: moderateScale(20),
-    marginTop: moderateScale(5),
-  },
-  Topic: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: moderateScale(10),
-  },
-  Moretopic: {
-    color: Colors.primary,
-    borderColor: Colors.primary,
   },
 });
 

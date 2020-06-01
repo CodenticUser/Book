@@ -22,6 +22,7 @@
     "react-native-safe-area-context": "^1.0.0",
     "react-native-screens": "^2.7.0",
     "react-native-size-matters": "^0.3.0",
+    "react-native-snap-carousel": "^3.9.1",
     "react-native-swiper": "^1.6.0"
   },
   "devDependencies": {

@@ -21,9 +21,9 @@ const Stack = createStackNavigator();
 function Auth() {
   return (
     <Stack.Navigator headerMode={false}>
+      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="StartScreen" component={StartScreen} />
-      <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
     </Stack.Navigator>
   );
 }
