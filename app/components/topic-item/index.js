@@ -11,7 +11,7 @@ import {
 import {Images} from '@theme';
 import styles from './styles';
 
-export const TopicItem = ({title, img, onPress, id, isSelect}) => {
+export const TopicItem = ({title, img, onPress, id, isSelect, place}) => {
   return (
     <TouchableOpacity onPress={() => onPress(id)} style={styles.MyTouch}>
       {isSelect && (
