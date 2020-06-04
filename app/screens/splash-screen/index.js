@@ -16,7 +16,6 @@ export const SplashScreen = (props) => {
       <View style={styles.MainImage}>
         <View style={styles.Img}>
           <Image source={Images.homebook} />
-
           <Text style={styles.ImageText}>Book Share</Text>
         </View>
       </View>

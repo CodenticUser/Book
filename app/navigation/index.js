@@ -14,6 +14,9 @@ import {
   WishlistScreen,
   StoreScreen,
   ProfileScreen,
+  LogInScreen,
+  SignInScreen,
+  SignUpScreen,
 } from '@screens';
 import {Images, Colors} from '@theme';
 
@@ -21,6 +24,9 @@ const Stack = createStackNavigator();
 function Auth() {
   return (
     <Stack.Navigator headerMode={false}>
+      <Stack.Screen name="LogInScreen" component={LogInScreen} />
+      <Stack.Screen name="SignInScreen" component={SignInScreen} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
       <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="StartScreen" component={StartScreen} />

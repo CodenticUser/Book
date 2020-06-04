@@ -4,4 +4,5 @@ export const Colors = {
   diactiveTintColoe: 'rgb(193,193,193)',
   skipColor: 'rgb(109,109,109)',
   shareFont: 'rgb(150,150,150)',
+  SignupColor: 'rgb(0,0,0)',
 };

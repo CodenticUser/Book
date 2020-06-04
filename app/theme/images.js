@@ -40,4 +40,7 @@ export const Images = {
   discoverandy: require('./images/andy.png'),
   discoveonce: require('./images/once.png'),
   discoverqueen1: require('./images/queen1.png'),
+  loginImage: require('./images/loginimg.png'),
+  loginBookImg: require('./images/loginbook.png'),
+  backBtn: require('./images/back.png'),
 };
