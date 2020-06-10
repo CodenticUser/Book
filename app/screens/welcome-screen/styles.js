@@ -59,9 +59,11 @@ const styles = StyleSheet.create({
     height: Size.moderateScale(100),
     width: Size.moderateScale(100),
   },
-  MainFlex: {flex: 1},
-  LinerData: {backgroundColor: 'red', height: Size.moderateScale(130)},
-  InsideLiner: {height: Size.moderateScale(130)},
+  MainContent: {flex: 1},
+  LinerData: {backgroundColor: 'red', height: Size.moderateScale(160)},
+  InsideLiner: {
+    height: Size.moderateScale(160),
+  },
   LinerText: {
     fontSize: moderateScale(20),
     color: Colors.secondary,

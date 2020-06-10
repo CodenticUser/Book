@@ -10,14 +10,13 @@ const styles = StyleSheet.create({
   HeaderImg: {
     height: Size.moderateScale(200),
     backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
     width: '100%',
+    flexDirection: 'row',
   },
   HeaderText: {
     color: Colors.secondary,
     fontWeight: 'bold',
-    marginTop: Size.moderateScale(30),
+
     fontSize: Size.moderateScale(35),
   },
   PlaceHolder: {
@@ -26,8 +25,10 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
     borderRadius: Size.moderateScale(10),
     padding: Size.moderateScale(10),
+    fontSize: Size.moderateScale(20),
   },
   MainPlaceHolder: {
+    marginTop: Size.moderateScale(40),
     justifyContent: 'space-between',
     height: Size.moderateScale(350),
   },
@@ -43,12 +44,11 @@ const styles = StyleSheet.create({
     fontSize: Size.moderateScale(35),
   },
   HeadImg: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: Size.moderateScale(190),
+    height: Size.moderateScale(20),
+    width: Size.moderateScale(20),
+    marginTop: Size.moderateScale(30),
+    marginHorizontal: Size.moderateScale(30),
+    tintColor: Colors.secondary,
   },
   Footer: {width: '100%'},
   ContText: {

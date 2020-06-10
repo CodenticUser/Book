@@ -5,17 +5,19 @@ import LinearGradient from 'react-native-linear-gradient';
 import {DATA} from './data';
 import styles from './styles';
 import {TopicItem} from '@components';
+import {TextInput} from 'react-native-gesture-handler';
+import {Size, Colors} from '@theme';
 
 export const WelcomeScreen = (props) => {
   const [addData, setAddData] = useState(9);
   const [myData, setMyData] = useState(DATA.filter((data) => data.id < 9));
   const [temp, setTemp] = useState(false);
+  const [searchText, setSearchText] = useState('');
   const refFlatList = useRef(null);
 
   const onPressHandler = (id) => {
     var newData = myData;
     var n = 0;
-
     for (var i = 0; i < myData.length; i++) {
       if (myData[i].isSelect) {
         n++;
@@ -33,7 +35,6 @@ export const WelcomeScreen = (props) => {
     setMyData(newData);
     setTemp(!temp);
   };
-
   const AddPlaceHandler = (place) => {
     console.log('DATA', DATA);
     setMyData(
@@ -49,50 +50,73 @@ export const WelcomeScreen = (props) => {
     setTemp(!temp);
   };
 
+  const onChangeHandler = (search) => {
+    setSearchText(search);
+    var SearchText = search.toLowerCase();
+    var FilteredText = DATA.filter((item) => {
+      return item.title.toLowerCase().match(SearchText);
+    });
+    setMyData(FilteredText);
+  };
+
   return (
-    <View style={styles.MainFlex}>
-      <View style={styles.LinerData}>
-        <LinearGradient
-          colors={['rgb(255,145,184)', 'rgb(255,145,184)', 'rgb(255,110,161)']}
-          style={styles.InsideLiner}>
-          <Text style={styles.LinerText}>Welcome</Text>
-          <Text style={styles.LinerSec}>Choose the topics</Text>
+    <View style={styles.MainContent}>
+      <LinearGradient
+        colors={['rgb(255,145,184)', 'rgb(255,145,184)', 'rgb(255,110,161)']}
+        style={styles.InsideLiner}>
+        <Text style={styles.LinerText}>Welcome</Text>
+        <Text style={styles.LinerSec}>Choose the topics</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginTop: 15,
+            marginHorizontal: 20,
+          }}>
+          <TouchableOpacity
+            style={{borderWidth: 1}}
+            onPress={() => setMyData(DATA)}>
+            <Text>ALL</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{borderWidth: 1}}
+            onPress={() => AddPlaceHandler('GJ')}>
+            <Text>GJ</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{borderWidth: 1}}
+            onPress={() => AddPlaceHandler('HR')}>
+            <Text>HR</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{borderWidth: 1}}
+            onPress={() => AddPlaceHandler('PN')}>
+            <Text>PN</Text>
+          </TouchableOpacity>
           <View
             style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              marginTop: 15,
+              borderWidth: 1,
+              borderRadius: 5,
+              height: 30,
+              width: 90,
+              justifyContent: 'center',
             }}>
-            <TouchableOpacity
-              style={{borderWidth: 1}}
-              onPress={() => setMyData(DATA)}>
-              <Text>ALL</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{borderWidth: 1}}
-              onPress={() => AddPlaceHandler('GJ')}>
-              <Text>GJ</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{borderWidth: 1}}
-              onPress={() => AddPlaceHandler('HR')}>
-              <Text>HR</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{borderWidth: 1}}
-              onPress={() => AddPlaceHandler('PN')}>
-              <Text>PN</Text>
-            </TouchableOpacity>
+            <TextInput
+              placeholder="search"
+              onChangeText={onChangeHandler}
+              value={searchText}
+            />
           </View>
-        </LinearGradient>
-        {/* <TouchableOpacity onPress={() => setMyData(DATA)}>
+        </View>
+      </LinearGradient>
+      {/* <TouchableOpacity onPress={() => setMyData(DATA)}>
         <Text>Click</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => setMyData([])}>
         <Text>Empty Data</Text>
       </TouchableOpacity> */}
-      </View>
+
       <FlatList
         ref={refFlatList}
         // maxToRenderPerBatch={9}

@@ -5,10 +5,9 @@ import {Images, Size, Colors} from '@theme';
 
 export const LogInScreen = (props) => {
   return (
-    <View style={styles.Container}>
+    <SafeAreaView style={styles.Container}>
       <View style={styles.HeaderImg}>
         <Text style={styles.HeaderText}>ONLINE LIBRARY</Text>
-        <Image style={styles.HeadImg} source={Images.loginImage} />
       </View>
       <View style={styles.MainArea}>
         <View style={styles.InnerContent}>
@@ -36,6 +35,6 @@ export const LogInScreen = (props) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };

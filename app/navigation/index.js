@@ -25,10 +25,12 @@ function Auth() {
   return (
     <Stack.Navigator headerMode={false}>
       <Stack.Screen name="LogInScreen" component={LogInScreen} />
-      <Stack.Screen name="SignInScreen" component={SignInScreen} />
       <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+      <Stack.Screen name="SignInScreen" component={SignInScreen} />
       <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
+
       <Stack.Screen name="StartScreen" component={StartScreen} />
     </Stack.Navigator>
   );

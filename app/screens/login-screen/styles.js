@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
   HeaderText: {
     color: Colors.secondary,
     fontWeight: 'bold',
-    marginTop: Size.moderateScale(30),
     fontSize: Size.moderateScale(35),
   },
   HeadImg: {
@@ -30,8 +29,8 @@ const styles = StyleSheet.create({
   Footer: {width: '100%'},
   ContText: {
     textAlign: 'center',
-    lineHeight: Size.moderateScale(20),
     color: Colors.primary,
+    fontSize: Size.moderateScale(15),
   },
   MainArea: {
     borderTopLeftRadius: Size.moderateScale(20),

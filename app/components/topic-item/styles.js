@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    paddingTop: Size.moderateScale(35),
   },
   FlatData: {
     position: 'absolute',
@@ -31,8 +30,8 @@ const styles = StyleSheet.create({
     right: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: Size.moderateScale(35),
     marginLeft: Size.moderateScale(10),
+    marginTop: Size.moderateScale(20),
   },
   ImgData: {
     tintColor: Colors.secondary,

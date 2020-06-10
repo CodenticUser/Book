@@ -19,8 +19,11 @@ export const TopicItem = ({title, img, onPress, id, isSelect, place}) => {
           <Image style={styles.ImgData} source={Images.welcomecorrect} />
         </View>
       )}
-      <Image style={styles.InsideImg} source={img} />
-      <Text style={styles.title}>{title}</Text>
+      <View
+        style={{marginTop: 40, justifyContent: 'center', alignItems: 'center'}}>
+        <Image style={styles.InsideImg} source={img} />
+        <Text style={styles.title}>{title}</Text>
+      </View>
     </TouchableOpacity>
   );
 };

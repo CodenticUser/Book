@@ -5,4 +5,5 @@ export const Colors = {
   skipColor: 'rgb(109,109,109)',
   shareFont: 'rgb(150,150,150)',
   SignupColor: 'rgb(0,0,0)',
+  Red: 'rgb(255,0,0)',
 };

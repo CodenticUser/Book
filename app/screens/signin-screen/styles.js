@@ -14,19 +14,23 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
     borderRadius: Size.moderateScale(10),
     padding: Size.moderateScale(10),
+    fontSize: Size.moderateScale(20),
   },
   HeaderImg: {
-    height: Size.moderateScale(350),
+    height: Size.moderateScale(320),
     backgroundColor: Colors.primary,
-    justifyContent: 'center',
-    alignItems: 'center',
     width: '100%',
+    flexDirection: 'row',
   },
   HeaderText: {
     color: Colors.secondary,
     fontWeight: 'bold',
-    marginTop: Size.moderateScale(30),
-    fontSize: Size.moderateScale(35),
+    fontSize: Size.moderateScale(40),
+  },
+  MainHead: {
+    flex: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   AccText: {
     color: Colors.primary,
@@ -35,12 +39,11 @@ const styles = StyleSheet.create({
     padding: Size.moderateScale(35),
   },
   HeadImg: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: Size.moderateScale(340),
+    height: Size.moderateScale(20),
+    height: Size.moderateScale(20),
+    marginTop: Size.moderateScale(30),
+    marginHorizontal: Size.moderateScale(30),
+    tintColor: Colors.secondary,
   },
   Footer: {width: '100%'},
   ContText: {
@@ -89,7 +92,16 @@ const styles = StyleSheet.create({
   backBtn: {
     height: Size.moderateScale(20),
     width: Size.moderateScale(20),
-    tintColor: Colors.primary,
+    tintColor: Colors.secondary,
+    marginTop: Size.moderateScale(30),
+    marginHorizontal: Size.moderateScale(30),
+  },
+  MainPlaceHolder: {
+    marginTop: Size.moderateScale(30),
+    justifyContent: 'space-between',
+    height: Size.moderateScale(350),
+
+    height: Size.moderateScale(200),
   },
 });
 
